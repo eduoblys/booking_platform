@@ -21,7 +21,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'e$2iyo&3xa_ymewdg=ig2qa=f91q%tg@00)w7$j^c9duu$m^sg'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -74,14 +73,15 @@ WSGI_APPLICATION = 'bookingapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASE_PASSWORD = os.environ.get("PASSW", '')
+db_pass = os.environ.get('DB_PASS')
+db_user = os.environ.get("DB_USER")
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': db_pass,
         'HOST': 'localhost',
         'PORT': '5432',
     }
