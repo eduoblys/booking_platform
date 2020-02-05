@@ -1,0 +1,15 @@
+{% extends "booking/base.html" %}
+{% load static %}
+{% block content %}
+<div>
+    <ul>
+        {% for item in data %}
+            <li>      
+                <small>{{ item.comment }}</small>
+            </li>
+        {% endfor %}
+<ul>  
+</div>
+
+{% endblock content %}
+

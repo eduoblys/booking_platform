@@ -1,0 +1,14 @@
+{% extends "booking/base.html" %}
+{% load static %}
+{% block content %}
+<div>
+    <h1>Reservation</h1>
+    <form role="form" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+{% endblock content %}
+
