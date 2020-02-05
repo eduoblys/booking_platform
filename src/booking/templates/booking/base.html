@@ -1,5 +1,6 @@
 {% load static %}
 
+{% load i18n %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,8 +30,8 @@
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
-              <a class="nav-item nav-link" href="{% url 'reservation-form' %}">Reservation</a>
-              <a class="nav-item nav-link" href="{% url 'manager-home' %}">Admin panel</a>
+              <a class="nav-item nav-link" href="{% url 'reservation-form' %}">{% trans "Reservation" %}</a>
+              <a class="nav-item nav-link" href="{% url 'manager-home' %}">{% trans "Admin Panel" %}</a>
             </div>
           </div>
         </div>

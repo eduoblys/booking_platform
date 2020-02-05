@@ -1,5 +1,5 @@
 {% extends "booking/base.html" %}
-{% load static %}
+{% load i18n %}
 {% block content %}
 <div>
     <h1>Reservation</h1>
@@ -8,6 +8,7 @@
     {{ form.as_p }}
     <button type="submit">Submit</button>
 </form>
+<small>{% trans "Fields with * are required" %}</small>
 </div>
 
 {% endblock content %}

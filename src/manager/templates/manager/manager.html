@@ -1,15 +1,44 @@
 {% extends "booking/base.html" %}
-{% load static %}
+{% load i18n %}
 {% block content %}
 <div>
-    <ul>
-        {% for item in data %}
-            <li>      
-                <small>{{ item.comment }}</small>
-            </li>
-        {% endfor %}
-<ul>  
+    <table>
+    <tr>
+        <th>ID</th>
+        <th>F. Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>comment</th>
+    </tr>
+    {% for item in data %}
+    <tr> 
+        <td>{{ item.id }}</td>
+        <td>{{ item.firstname }}</td>
+        <td>{{ item.lastname }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.comment }}</td>
+    </tr>
+    {% endfor %}
+</table>
 </div>
 
+
+<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}">
+    <select name="language">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                {{ language.name_local }} ({{ language.code }})
+            </option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Go">
+</form>
+
 {% endblock content %}
+
+
 

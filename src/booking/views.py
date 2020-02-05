@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from django.utils import translation
 from .forms import ReservationsForm
 
 def home(request):
+    if translation.LANGUAGE_SESSION_KEY in request.session:
+        del request.session[translation.LANGUAGE_SESSION_KEY]
     return render(request, 'booking/home.html')
 
 

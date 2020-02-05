@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-05 23:19+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < "
+"11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
+"1 : n % 1 != 0 ? 2: 3);\n"
+
+#: .\booking\models.py:6
+msgid "first name*"
+msgstr "vardas*"
+
+#: .\booking\models.py:7
+msgid "last name*"
+msgstr "pavardė*"
+
+#: .\booking\models.py:8
+msgid "e-mail:"
+msgstr "el-paštas:"
+
+#: .\booking\models.py:9
+msgid "comment*"
+msgstr "komentaras*"
+
+#: .\booking\templates\booking\base.html:33
+msgid "Reservation"
+msgstr "Rezervacija"
+
+#: .\booking\templates\booking\base.html:34
+msgid "Admin Panel"
+msgstr "Administracija"
+
+#: .\booking\templates\booking\reservation.html:11
+msgid "Fields with * are required"
+msgstr "Laukai su * yra privalomi"
