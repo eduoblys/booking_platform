@@ -13,7 +13,6 @@ class Reservations(models.Model):
         ('6', _("six")),
     ]
 
-
     firstname= models.CharField(verbose_name=_("first name*"), max_length=100, null=True)
     lastname= models.CharField(verbose_name=_("last name*"), max_length=100, null=True)
     email= models.EmailField(verbose_name=_("e-mail:"), blank=True, null=True)
@@ -22,7 +21,9 @@ class Reservations(models.Model):
     date_applied = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):
-        return self.comment
+        return self.firstname
 
 
-
+class Approved(models.Model):
+    name = models.ForeignKey(Reservations, null=True, on_delete=models.CASCADE)
+    stay_approved = models.BooleanField(verbose_name=_("Approved"),null=True)
