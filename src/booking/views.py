@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.utils import translation
-from .forms import ReservationsForm
+from .forms import ReservationForm
 
 def home(request):
     if translation.LANGUAGE_SESSION_KEY in request.session:
@@ -11,7 +11,7 @@ def home(request):
 
 
 def showform(request):
-    form = ReservationsForm(request.POST or None)
+    form = ReservationForm(request.POST or None)
     if form.is_valid():
         form.save()
     context= {'form': form }

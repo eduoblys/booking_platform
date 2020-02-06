@@ -9,6 +9,7 @@
         <th>Last Name</th>
         <th>Email</th>
         <th>comment</th>
+        <th>people</th>
     </tr>
     {% for item in data %}
     <tr> 
@@ -17,13 +18,16 @@
         <td>{{ item.lastname }}</td>
         <td>{{ item.email }}</td>
         <td>{{ item.comment }}</td>
+        <td>{{ item.num_of_ppl }}</td>
+        <td>{{ item.date_applied }}</td>
+
     </tr>
     {% endfor %}
 </table>
 </div>
 
 
-<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+<form action="{% url 'manager-home' %}" method="post">{% csrf_token %}
     <input name="next" type="hidden" value="{{ redirect_to }}">
     <select name="language">
         {% get_current_language as LANGUAGE_CODE %}
