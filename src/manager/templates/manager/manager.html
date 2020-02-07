@@ -1,25 +1,26 @@
 {% extends "booking/base.html" %}
 {% load i18n %}
 {% block content %}
-<div>
-    <table>
+<div class="col-md-12">
+    <table class="table">
     <tr>
-        <th>ID</th>
-        <th>F. Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>comment</th>
-        <th>people</th>
+        <th scope="col">ID</th>
+        <th scope="col">F. Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">comment</th>
+        <th scope="col">people</th>
+        <th scope="col">date</th>
     </tr>
     {% for item in data %}
     <tr> 
-        <td>{{ item.id }}</td>
+        <td scope="row">{{ item.id }}</td>
         <td>{{ item.firstname }}</td>
         <td>{{ item.lastname }}</td>
         <td>{{ item.email }}</td>
         <td>{{ item.comment }}</td>
         <td>{{ item.num_of_ppl }}</td>
-        <td>{{ item.date_applied }}</td>
+        <td>{{ item.date_applied|date:"m-d" }}</td>
 
     </tr>
     {% endfor %}

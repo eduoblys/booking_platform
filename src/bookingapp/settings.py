@@ -29,12 +29,14 @@ ALLOWED_HOSTS = ['192.168.1.14', '127.0.0.1']
 INSTALLED_APPS = [
     'booking.apps.BookingConfig',
     'manager.apps.ManagerConfig',
+    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'bootstrapform',
 ]
 
@@ -143,3 +145,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'booking-home'

@@ -13,11 +13,11 @@ class Reservations(models.Model):
         ('6', _("six")),
     ]
 
-    firstname= models.CharField(verbose_name=_("first name*"), max_length=100, null=True)
-    lastname= models.CharField(verbose_name=_("last name*"), max_length=100, null=True)
+    firstname= models.CharField(verbose_name=_("first name*"), max_length=100)
+    lastname= models.CharField(verbose_name=_("last name*"), max_length=100)
     email= models.EmailField(verbose_name=_("e-mail:"), blank=True, null=True)
-    num_of_ppl = models.CharField(max_length=6, choices=CHOICES, null=True)
-    comment= models.CharField(verbose_name=_("comment*"), max_length=10000, null=True)
+    num_of_ppl = models.CharField(max_length=6, choices=CHOICES)
+    comment= models.CharField(verbose_name=_("comment*"), max_length=10000)
     date_applied = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):

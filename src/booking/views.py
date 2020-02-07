@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.utils import translation
 from .forms import ReservationForm
 
@@ -11,9 +11,13 @@ def home(request):
 
 
 def showform(request):
-    form = ReservationForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-    context= {'form': form }
-        
-    return render(request, 'booking/reservation.html', context)
+    if request.method == 'POST':
+        form = ReservationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('firstname')
+            messages.success(request, 'Reservation succesful')
+            return redirect('booking-home')
+    else:
+        form = ReservationForm()
+    return render(request, 'booking/reservation.html', {'form': form})
