@@ -8,7 +8,7 @@
             {{ form|crispy }}
             <input type="submit" value="Update">
         </form>
-        <p>Date applied: {{object.date_applied}}</p>
+        <p>{% trans "Date applied" %}: {{object.date_applied}}</p>
     </div>
 </div>
 {% endblock content %}

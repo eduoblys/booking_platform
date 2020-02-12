@@ -15,11 +15,8 @@
     </tr>
     {% for item in data %}
     <tr> 
-        
-        
-        <td scope="row"><a href="{% url 'manager-update' item.id %}">{{ item.id }}</td></a>
-        
-        
+               
+        <td scope="row"><a href="{% url 'manager-update' item.id %}">{{ item.id }}</td></a>       
         <td>{{ item.firstname }}</td>
         <td>{{ item.lastname }}</td>
         <td>{{ item.email }}</td>
@@ -31,12 +28,6 @@
     {% endfor %}
 </table>
 </div>
-
-
-
-
-
-
 
 <form action="{% url 'manager-home' %}" method="post">{% csrf_token %}
     <input name="next" type="hidden" value="{{ redirect_to }}">

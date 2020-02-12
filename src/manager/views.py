@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import UpdateView
@@ -25,7 +26,7 @@ def manager(request):
     return render(request, "manager/manager.html", context)
 
 
-class StayUpdate(UpdateView):
+class StayUpdate(LoginRequiredMixin, UpdateView):
     model = Reservations
     fields = ['firstname', 'lastname', 'email', 'num_of_ppl','comment', 'stay_approved']
     template_name_suffix = '_update_form'
