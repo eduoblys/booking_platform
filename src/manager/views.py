@@ -1,18 +1,42 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
+
+from django.views.generic.edit import UpdateView
 
 import io
 from django.http import FileResponse
 from reportlab.pdfgen import canvas
 
-from booking.models import Reservations
+from booking.models import  Reservations
+
+
+
+
 
 def manager(request):
       
     data = Reservations.objects.all()
+
+
     context={
-      'data': data
+        'data': data
+
     }
     return render(request, "manager/manager.html", context)
+
+class StayUpdate(UpdateView):
+    model = Reservations
+    fields = ['firstname', 'lastname', 'email', 'num_of_ppl','comment', 'stay_approved']
+    template_name_suffix = '_update_form'
+
+
+    def form_valid(self, form):
+        messages.success(self.request, 'update succesful')
+          
+        return redirect('manager-home')
+
+
+
 
 def print_pdf(request):
     # Create a file-like buffer to receive PDF data.

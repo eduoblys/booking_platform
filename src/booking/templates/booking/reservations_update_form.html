@@ -1,0 +1,15 @@
+{% extends "booking/base.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">{% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" value="Update">
+        </form>
+        <p>Date applied: {{object.date_applied}}</p>
+    </div>
+</div>
+{% endblock content %}
+

@@ -11,21 +11,30 @@
         <th scope="col">comment</th>
         <th scope="col">people</th>
         <th scope="col">date</th>
+        <th scope="col">approved</th>
     </tr>
     {% for item in data %}
     <tr> 
-        <td scope="row">{{ item.id }}</td>
+        
+        
+        <td scope="row"><a href="{% url 'manager-update' item.id %}">{{ item.id }}</td></a>
+        
+        
         <td>{{ item.firstname }}</td>
         <td>{{ item.lastname }}</td>
         <td>{{ item.email }}</td>
         <td>{{ item.comment }}</td>
         <td>{{ item.num_of_ppl }}</td>
         <td>{{ item.date_applied|date:"m-d" }}</td>
-
+        <td>{{ item.stay_approved }}</td>
     </tr>
     {% endfor %}
 </table>
 </div>
+
+
+
+
 
 
 

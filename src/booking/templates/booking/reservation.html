@@ -2,15 +2,19 @@
 {% load crispy_forms_tags %}
 {% load i18n %}
 {% block content %}
-<div>
-    <h1>Reservation</h1>
-    <form role="form" action="" method="post">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <button type="submit">Submit</button>
-</form>
-<small>{% trans "Fields with * are required" %}</small>
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Reservation</h1>
+        <form role="form" action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit">Submit</button>
+        </form>
+        <small>{% trans "Fields with * are required" %}</small>
+    </div>
 </div>
+
 
 {% endblock content %}
 
