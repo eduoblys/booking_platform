@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-
+from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import UpdateView
 
 import io
@@ -12,7 +12,7 @@ from booking.models import  Reservations
 
 
 
-
+@login_required
 def manager(request):
       
     data = Reservations.objects.all()
@@ -24,12 +24,13 @@ def manager(request):
     }
     return render(request, "manager/manager.html", context)
 
+
 class StayUpdate(UpdateView):
     model = Reservations
     fields = ['firstname', 'lastname', 'email', 'num_of_ppl','comment', 'stay_approved']
     template_name_suffix = '_update_form'
 
-
+    
     def form_valid(self, form):
         messages.success(self.request, 'update succesful')
           
