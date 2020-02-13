@@ -5,21 +5,20 @@
 {% bootstrap_css %}         {# Embed Bootstrap CSS #}
 {% bootstrap_javascript jquery='full' %}  {# Embed Bootstrap JS+jQuery #}
 
-
 {% load crispy_forms_tags %}
 {% load i18n %}
 {% block content %}
  
 <div class="row">
     <div class="col-md-12">
-        <h1>Reservation</h1>
+        <h1>{% trans "Reservation" %}</h1>
         <form role="form" action="" method="post">
         {% csrf_token %}
 
 
         {{ form|crispy }}
         {{ form.media }}
-        <button type="submit">Submit</button>
+        <button type="submit">{% trans "Submit" %}</button>
         </form>
         <small>{% trans "Fields with * are required" %}</small>
     </div>

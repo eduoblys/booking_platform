@@ -24,8 +24,10 @@ urlpatterns = [
 
 ]
 urlpatterns += i18n_patterns(
+    path('i18n/', include('django.conf.urls.i18n')),
     path('', include('booking.urls')),
     path('manager/', include('manager.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    prefix_default_language=False,
 )

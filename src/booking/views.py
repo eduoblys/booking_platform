@@ -3,6 +3,9 @@ from django.contrib import messages
 from django.utils import translation
 from .forms import ReservationForm
 
+from django.utils.translation import ugettext as _
+
+
 def home(request):
     if translation.LANGUAGE_SESSION_KEY in request.session:
         del request.session[translation.LANGUAGE_SESSION_KEY]
@@ -16,7 +19,7 @@ def showform(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('firstname')
-            messages.success(request, 'Reservation succesful')
+            messages.success(request, _('Reservation succesful'))
             return redirect('booking-home')
     else:
         form = ReservationForm()

@@ -4,7 +4,7 @@ from django.core.paginator import Paginator
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import UpdateView, DeleteView
-
+from django.utils.translation import ugettext as _
 
 from booking.models import  Reservations
 
@@ -30,7 +30,7 @@ class StayUpdate(LoginRequiredMixin, UpdateView):
     success_url='/manager'
 
     def form_valid(self, form):
-        messages.success(self.request, 'update succesful')
+        messages.success(self.request, _('update succesful'))
         return super().form_valid(form)
         
         

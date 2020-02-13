@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-13 16:50+0100\n"
+"POT-Creation-Date: 2020-02-13 16:17+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,40 +21,54 @@ msgstr ""
 "1 : n % 1 != 0 ? 2: 3);\n"
 
 #: .\booking\models.py:17
+#, fuzzy
+#| msgid "first name*"
 msgid "first name"
 msgstr "vardas"
 
 #: .\booking\models.py:18
+#, fuzzy
+#| msgid "last name*"
 msgid "last name"
 msgstr "pavardė"
 
 #: .\booking\models.py:19
 msgid "e-mail:"
-msgstr "paštas:"
+msgstr "el-paštas:"
 
 #: .\booking\models.py:20
+#, fuzzy
+#| msgid "Amount"
 msgid "amount"
-msgstr "žmonių skaičius"
+msgstr "Žmonių skaičius"
 
 #: .\booking\models.py:21
+#, fuzzy
+#| msgid "comment*"
 msgid "comment"
-msgstr "komentaras"
+msgstr "komentaras*"
 
 #: .\booking\models.py:22
+#, fuzzy
+#| msgid "Date in"
 msgid "date in"
-msgstr "atvykimo data"
+msgstr "Atvykimo data"
 
 #: .\booking\models.py:23
+#, fuzzy
+#| msgid "Date out"
 msgid "date out"
-msgstr "išvykimo data"
+msgstr "Išvykimo data"
 
 #: .\booking\models.py:24
 msgid "date of application"
 msgstr "užsakymo data"
 
 #: .\booking\models.py:25
+#, fuzzy
+#| msgid "Approved"
 msgid "approved"
-msgstr "patvirtinta"
+msgstr "Patvirtinta"
 
 #: .\booking\templates\booking\base.html:45
 #: .\booking\templates\booking\base.html:49
@@ -65,14 +79,6 @@ msgstr "Rezervacija"
 #: .\booking\templates\booking\base.html:46
 msgid "Admin Panel"
 msgstr "Administracija"
-
-#: .\booking\templates\booking\base.html:47
-msgid "Logout"
-msgstr "Atsijungti"
-
-#: .\booking\templates\booking\base.html:50
-msgid "Login"
-msgstr "Prisijungti"
 
 #: .\booking\templates\booking\reservation.html:21
 msgid "Submit"
@@ -97,28 +103,38 @@ msgid "Date applied"
 msgstr "Užklausos data"
 
 #: .\booking\views.py:22
+#, fuzzy
+#| msgid "Reservation"
 msgid "Reservation succesful"
 msgstr "Rezervacija sėkminga"
 
 #: .\manager\templates\manager\manager.html:10
 msgid "ID"
-msgstr "Nr."
+msgstr "ID"
 
 #: .\manager\templates\manager\manager.html:11
+#, fuzzy
+#| msgid "first name*"
 msgid "First name"
 msgstr "Vardas"
 
 #: .\manager\templates\manager\manager.html:12
+#, fuzzy
+#| msgid "last name*"
 msgid "Last name"
-msgstr "Pavardė"
+msgstr "Pavardė*"
 
 #: .\manager\templates\manager\manager.html:13
+#, fuzzy
+#| msgid "e-mail:"
 msgid "Email"
 msgstr "el-paštas:"
 
 #: .\manager\templates\manager\manager.html:14
+#, fuzzy
+#| msgid "comment*"
 msgid "Comment"
-msgstr "Komentaras"
+msgstr "Komentaras*"
 
 #: .\manager\templates\manager\manager.html:15
 msgid "Amount"
@@ -126,7 +142,7 @@ msgstr "Žmonių skaičius"
 
 #: .\manager\templates\manager\manager.html:16
 msgid "Date"
-msgstr "Užklausos data"
+msgstr "Data"
 
 #: .\manager\templates\manager\manager.html:17
 msgid "Date in"
@@ -140,6 +156,6 @@ msgstr "Išvykimo data"
 msgid "Approved"
 msgstr "Patvirtinta"
 
-#: .\manager\templates\manager\manager.html:39
+#: .\manager\templates\manager\manager.html:54
 msgid "Print"
 msgstr "Spausdinti"
