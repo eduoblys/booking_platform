@@ -23,10 +23,10 @@
     <tr> 
       
         <td scope="row"><a href="{% url 'manager-update' item.id %}">{{ item.id }}</td></a>       
-        <td>{{ item.firstname }}</td>
-        <td>{{ item.lastname }}</td>
-        <td>{{ item.email }}</td>
-        <td>{{ item.comment }}</td>
+        <td>{{ item.firstname|truncatechars:10 }}</td>
+        <td>{{ item.lastname|truncatechars:12 }}</td>
+        <td>{{ item.email|truncatechars:15 }}</td>
+        <td>{{ item.comment|truncatechars:16 }}</td>
         <td>{{ item.num_of_ppl }}</td>
         <td>{{ item.date_applied|date:"m-d" }}</td>
         <td>{{ item.start_date}}</td>
