@@ -9,6 +9,8 @@
             <input type="submit" value="Update">
         </form>
         <p>{% trans "Date applied" %}: {{object.date_applied}}</p>
+        <a href="{% url 'manager-update' object.id %}/delete">Delete</a>       
+
     </div>
 </div>
 {% endblock content %}

@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    'bootstrap_datepicker_plus',
+
 
 ]
 #    'bootstrapform',
@@ -114,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'lt'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
@@ -133,8 +135,9 @@ LANGUAGES = [
     ('lt', 'Lithuanian'),
 ]
 
-
-
+BOOTSTRAP4 = {
+    'include_jquery': True,
+}
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 

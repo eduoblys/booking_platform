@@ -3,8 +3,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.views.generic.edit import UpdateView
-from . import urls
+from django.views.generic.edit import UpdateView, DeleteView
+
 
 from booking.models import  Reservations
 
@@ -34,4 +34,8 @@ class StayUpdate(LoginRequiredMixin, UpdateView):
         return super().form_valid(form)
         
         
+class StayDeleteView(LoginRequiredMixin, DeleteView):
+    model = Reservations
+    success_url = '/manager'
 
+    

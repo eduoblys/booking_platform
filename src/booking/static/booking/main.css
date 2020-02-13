@@ -40,9 +40,14 @@ body {
   
   
   td {
-    transition: 0.3s;
+    transition: 0.5s;
+    font-size: 14px;
   }
 
+  th {
+    transition: 0.5s;
+    font-size: 15px;
+  }
   td:hover {
     background-color: #cccccc;
   }

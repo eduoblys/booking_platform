@@ -14,7 +14,10 @@
         <th scope="col">comment</th>
         <th scope="col">people</th>
         <th scope="col">date</th>
+        <th scope="col">start_date</th>
+        <th scope="col">end_date</th>
         <th scope="col">approved</th>
+        <th scope="col">delete</th>
     </tr>
     {% for item in data %}
     <tr> 
@@ -26,7 +29,10 @@
         <td>{{ item.comment }}</td>
         <td>{{ item.num_of_ppl }}</td>
         <td>{{ item.date_applied|date:"m-d" }}</td>
+        <td>{{ item.start_date}}</td>
+        <td>{{ item.end_date }}</td>
         <td>{{ item.stay_approved }}</td>
+        <td><a href="{% url 'manager-update' item.id %}/delete ">Del</td></a>
     </tr>
     {% endfor %}
 </table>
@@ -45,6 +51,7 @@
     </select>
     <input type="submit" value="Go">
 </form>
+<a href="{% url 'manager-print' %} ">Print</a>
 
 
 
