@@ -8,6 +8,11 @@ from booking.models import Reservations
 
 
 
+
+
+
+
+
 def print_pdf(request):
     # Create a file-like buffer to receive PDF data.
     buffer = io.BytesIO()

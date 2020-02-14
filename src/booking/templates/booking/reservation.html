@@ -8,16 +8,16 @@
 {% load crispy_forms_tags %}
 {% load i18n %}
 {% block content %}
- 
+
 <div class="row">
     <div class="col-md-12">
         <h1>{% trans "Reservation" %}</h1>
-        <form role="form" action="" method="post">
+        <form class="datePick" role="form" action="" method="post">
         {% csrf_token %}
 
 
         {{ form|crispy }}
-        {{ form.media }}
+ 
         <button type="submit">{% trans "Submit" %}</button>
         </form>
         <small>{% trans "Fields with * are required" %}</small>
