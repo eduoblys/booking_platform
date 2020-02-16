@@ -1,4 +1,4 @@
-from bootstrap_datepicker_plus import DatePickerInput
+
 
 #from ..bookingapp.widgets import BootstrapDateTimePickerInput
 ##DateInput(attrs={'class': 'datepicker'})

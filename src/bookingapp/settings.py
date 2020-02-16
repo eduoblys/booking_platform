@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap4',
-    'bootstrap_datepicker_plus',
     'crispy_forms',
     'debug_toolbar',
 
@@ -93,9 +92,9 @@ db_user = os.environ.get("DB_USER")
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': db_user,
-        'PASSWORD': db_pass,
+        'NAME': 'pgdb',
+        'USER': 'db_user',
+        'PASSWORD': 'db_pass',
         'HOST': 'localhost',
         'PORT': '5432',
     }
