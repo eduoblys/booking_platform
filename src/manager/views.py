@@ -1,3 +1,4 @@
+from django.urls import reverse
 from django.shortcuts import render, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
@@ -6,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import UpdateView, DeleteView
 from django.utils.translation import ugettext as _
 
+from . import views
 from booking.models import  Reservations
 
 @login_required
@@ -36,6 +38,5 @@ class StayUpdate(LoginRequiredMixin, UpdateView):
         
 class StayDeleteView(LoginRequiredMixin, DeleteView):
     model = Reservations
-    success_url = '/manager'
-
+    
     

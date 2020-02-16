@@ -11,6 +11,11 @@ body {
   ul {
     margin: 0;
   }
+
+  li {
+    margin: 0;
+    list-style-type: none;
+  }
   
   .bg-steel {
     background-color: #374b40;

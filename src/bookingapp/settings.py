@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'crispy_forms',
     'debug_toolbar',
-
+    'django_ajax_tables',
 
 ]
 #    'bootstrapform',
@@ -93,8 +93,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'pgdb',
-        'USER': 'db_user',
-        'PASSWORD': 'db_pass',
+        'USER': db_user,
+        'PASSWORD': db_pass,
         'HOST': 'localhost',
         'PORT': '5432',
     }

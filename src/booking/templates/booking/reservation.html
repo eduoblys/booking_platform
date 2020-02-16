@@ -14,10 +14,19 @@
         <h1>{% trans "Reservation" %}</h1>
         <form class="datePick" role="form" action="" method="post">
         {% csrf_token %}
+        
+         <ul>
+            <li>{{ form.firstname|as_crispy_field }}</li>
+            <li>{{ form.lastname|as_crispy_field }}</li>
+            <li>{{ form.email|as_crispy_field }}</li>
+            <li>{{ form.num_of_ppl|as_crispy_field }}</li>
+            <li>{{ form.comment|as_crispy_field }}</li>
+            <li class="col-md-4 col-sm-6 col-ss-8">{{ form.start_date|as_crispy_field }}</li>
+            <li class="col-md-4 col-sm-6">{{ form.end_date|as_crispy_field }}</li>
+
+        </ul> 
 
 
-        {{ form|crispy }}
- 
         <button type="submit">{% trans "Submit" %}</button>
         </form>
         <small>{% trans "Fields with * are required" %}</small>

@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-
+import django_tables2 as tables
 
 class Reservations(models.Model):
 
@@ -27,3 +27,8 @@ class Reservations(models.Model):
         return self.firstname
 
 
+
+
+class SimpleTable(tables.Table):
+    class Meta:
+        model = Reservations
