@@ -5,7 +5,7 @@ from .forms import ReservationForm
 
 from django.http import HttpResponse
 from django_tables2 import RequestConfig
-from .models import SimpleTable, Reservations
+from .models import  Reservations
 #from django.utils.translation import ugettext as _
 
 
@@ -28,8 +28,3 @@ def showform(request):
         form = ReservationForm()
     return render(request, 'booking/reservation.html', {'form': form})
 
-
-def simple_view(request):
-    simple_table = SimpleTable(Reservations.objects.all())
-    RequestConfig(request).configure(simple_table)
-    return HttpResponse(simple_table.as_html(request))

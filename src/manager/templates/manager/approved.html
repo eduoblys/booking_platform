@@ -7,7 +7,7 @@
     
     <table class="table">
     <tr>
-        <th scope="col">{% trans "ID" %}</th>
+
         <th scope="col">{% trans "First name" %}</th>
         <th scope="col">{%trans "Last name"%}</th>
         <th scope="col">{%trans "Email"%}</th>
@@ -16,13 +16,11 @@
         <th scope="col">{%trans "Date"%}</th>
         <th scope="col">{%trans "Date in"%}</th>
         <th scope="col">{%trans "Date out"%}</th>
-        <th scope="col">{%trans "Approved"%}</th>
-        <th scope="col">{%trans "Delete"%}</th>
     </tr>
     {% for item in data %}
     <tr> 
       
-        <td scope="row"><a href="{% url 'manager-update' item.id %}">{{ item.id }}</td></a>       
+        <td scope="row"><a href="{% url 'manager-update' item.id %}">{{ item.firstname|truncatechars:10 }}</td></a>       
         <td>{{ item.firstname|truncatechars:10 }}</td>
         <td>{{ item.lastname|truncatechars:12 }}</td>
         <td>{{ item.email|truncatechars:15 }}</td>
@@ -31,12 +29,10 @@
         <td>{{ item.date_applied|date:"m-d" }}</td>
         <td>{{ item.start_date}}</td>
         <td>{{ item.end_date }}</td>
-        <td>{{ item.stay_approved }}</td>
-        <td><a href="{% url 'manager-update' item.id %}/delete ">Del</td></a>
     </tr>
     {% endfor %}
 </table>
-<a href="{% url 'manager-print' %} ">{%trans "Print"%}</a>
+
 
 
 {% endblock content %}

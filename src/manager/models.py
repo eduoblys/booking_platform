@@ -1,6 +1,9 @@
 from django.db import models
 
-"""
-class Tennants(model.Models):
-    pass
-"""
+from booking.models import Reservations
+
+
+class Tennants(models.Model):
+    
+    reservationsAccepted =  models.ManyToManyField(Reservations)
+

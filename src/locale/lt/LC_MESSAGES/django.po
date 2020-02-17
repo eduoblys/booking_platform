@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-13 16:50+0100\n"
+"POT-Creation-Date: 2020-02-17 19:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,126 +20,134 @@ msgstr ""
 "11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
 "1 : n % 1 != 0 ? 2: 3);\n"
 
-#: .\booking\models.py:17
+#: booking/models.py:15
 msgid "first name"
 msgstr "vardas"
 
-#: .\booking\models.py:18
+#: booking/models.py:16
 msgid "last name"
 msgstr "pavardė"
 
-#: .\booking\models.py:19
+#: booking/models.py:17
 msgid "e-mail:"
 msgstr "paštas:"
 
-#: .\booking\models.py:20
+#: booking/models.py:18
 msgid "amount"
 msgstr "žmonių skaičius"
 
-#: .\booking\models.py:21
+#: booking/models.py:19
 msgid "comment"
 msgstr "komentaras"
 
-#: .\booking\models.py:22
-msgid "date in"
-msgstr "atvykimo data"
-
-#: .\booking\models.py:23
-msgid "date out"
-msgstr "išvykimo data"
-
-#: .\booking\models.py:24
+#: booking/models.py:22
 msgid "date of application"
 msgstr "užsakymo data"
 
-#: .\booking\models.py:25
+#: booking/models.py:23
 msgid "approved"
 msgstr "patvirtinta"
 
-#: .\booking\templates\booking\base.html:45
-#: .\booking\templates\booking\base.html:49
-#: .\booking\templates\booking\reservation.html:14
+#: booking/templates/booking/base.html:48
+#: booking/templates/booking/base.html:52
+#: booking/templates/booking/reservation.html:14
 msgid "Reservation"
 msgstr "Rezervacija"
 
-#: .\booking\templates\booking\base.html:46
+#: booking/templates/booking/base.html:49
 msgid "Admin Panel"
 msgstr "Administracija"
 
-#: .\booking\templates\booking\base.html:47
+#: booking/templates/booking/base.html:50
 msgid "Logout"
 msgstr "Atsijungti"
 
-#: .\booking\templates\booking\base.html:50
+#: booking/templates/booking/base.html:53
 msgid "Login"
 msgstr "Prisijungti"
 
-#: .\booking\templates\booking\reservation.html:21
+#: booking/templates/booking/reservation.html:30
 msgid "Submit"
 msgstr "Išsiūsti"
 
-#: .\booking\templates\booking\reservation.html:23
+#: booking/templates/booking/reservation.html:32
 msgid "Fields with * are required"
 msgstr "Laukai su * yra privalomi"
 
-#: .\booking\templates\booking\reservations_confirm_delete.html:8
-#: .\booking\templates\booking\reservations_update_form.html:12
-#: .\manager\templates\manager\manager.html:20
+#: booking/templates/booking/reservations_confirm_delete.html:8
+#: booking/templates/booking/reservations_update_form.html:12
+#: manager/templates/manager/manager.html:20
 msgid "Delete"
 msgstr "Ištrinti"
 
-#: .\booking\templates\booking\reservations_confirm_delete.html:13
+#: booking/templates/booking/reservations_confirm_delete.html:13
 msgid "Cancel"
 msgstr "Atšaukti"
 
-#: .\booking\templates\booking\reservations_update_form.html:11
+#: booking/templates/booking/reservations_update_form.html:11
 msgid "Date applied"
 msgstr "Užklausos data"
 
-#: .\booking\views.py:22
-msgid "Reservation succesful"
-msgstr "Rezervacija sėkminga"
-
-#: .\manager\templates\manager\manager.html:10
-msgid "ID"
-msgstr "Nr."
-
-#: .\manager\templates\manager\manager.html:11
+#: manager/templates/manager/approved.html:11
+#: manager/templates/manager/manager.html:11
 msgid "First name"
 msgstr "Vardas"
 
-#: .\manager\templates\manager\manager.html:12
+#: manager/templates/manager/approved.html:12
+#: manager/templates/manager/manager.html:12
 msgid "Last name"
 msgstr "Pavardė"
 
-#: .\manager\templates\manager\manager.html:13
+#: manager/templates/manager/approved.html:13
+#: manager/templates/manager/manager.html:13
 msgid "Email"
 msgstr "el-paštas:"
 
-#: .\manager\templates\manager\manager.html:14
+#: manager/templates/manager/approved.html:14
+#: manager/templates/manager/manager.html:14
 msgid "Comment"
 msgstr "Komentaras"
 
-#: .\manager\templates\manager\manager.html:15
+#: manager/templates/manager/approved.html:15
+#: manager/templates/manager/manager.html:15
 msgid "Amount"
 msgstr "Žmonių skaičius"
 
-#: .\manager\templates\manager\manager.html:16
+#: manager/templates/manager/approved.html:16
+#: manager/templates/manager/manager.html:16
 msgid "Date"
 msgstr "Užklausos data"
 
-#: .\manager\templates\manager\manager.html:17
+#: manager/templates/manager/approved.html:17
+#: manager/templates/manager/manager.html:17
 msgid "Date in"
 msgstr "Atvykimo data"
 
-#: .\manager\templates\manager\manager.html:18
+#: manager/templates/manager/approved.html:18
+#: manager/templates/manager/manager.html:18
 msgid "Date out"
 msgstr "Išvykimo data"
 
-#: .\manager\templates\manager\manager.html:19
+#: manager/templates/manager/manager.html:10
+msgid "ID"
+msgstr "Nr."
+
+#: manager/templates/manager/manager.html:19
 msgid "Approved"
 msgstr "Patvirtinta"
 
-#: .\manager\templates\manager\manager.html:39
+#: manager/templates/manager/manager.html:39
 msgid "Print"
 msgstr "Spausdinti"
+
+#: manager/views.py:59
+#, fuzzy
+#| msgid "Reservation succesful"
+msgid "update succesful"
+msgstr "Rezervacija sėkminga"
+
+#~ msgid "date in"
+#~ msgstr "atvykimo data"
+
+#~ msgid "date out"
+#~ msgstr "išvykimo data"

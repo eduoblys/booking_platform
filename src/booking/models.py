@@ -1,8 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-import django_tables2 as tables
-
 class Reservations(models.Model):
 
     CHOICES = [
@@ -23,12 +21,9 @@ class Reservations(models.Model):
     end_date = models.DateField(verbose_name="date out",blank=True, null=True)
     date_applied = models.DateTimeField(verbose_name=_("date of application"),auto_now_add=True, null=True)
     stay_approved = models.BooleanField(verbose_name=_("approved"),null=True, default=False)
+    
     def __str__(self):
         return self.firstname
 
 
 
-
-class SimpleTable(tables.Table):
-    class Meta:
-        model = Reservations

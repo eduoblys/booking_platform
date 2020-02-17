@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'bootstrap4',
     'crispy_forms',
     'debug_toolbar',
-    'django_ajax_tables',
 
 ]
 #    'bootstrapform',
