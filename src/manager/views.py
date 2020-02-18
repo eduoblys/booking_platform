@@ -7,8 +7,8 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import UpdateView, DeleteView
 from django.utils.translation import ugettext as _
 
-from django.urls import reverse
 
+from django.urls import reverse
 
 from . import views
 from booking.models import  Reservations
@@ -23,7 +23,6 @@ def manager(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
-
     context={
         'page_obj':page_obj,
         'data': data,
@@ -32,20 +31,12 @@ def manager(request):
 
 
 @login_required
-def approved(request):
-      
+def approved(request):    
     data = Reservations.objects.filter(stay_approved="True")
-
-
     context={
-
         'data': data,
-
     }
     return render(request, "manager/approved.html", context)
-
-
-
 
 
 class StayUpdate(LoginRequiredMixin, UpdateView):

@@ -43,6 +43,9 @@ body {
     margin-bottom: 20px;
   }
   
+.img-del {
+  height: 30px;
+}
   
   td {
     transition: 0.5s;
@@ -52,7 +55,4 @@ body {
   th {
     transition: 0.5s;
     font-size: 15px;
-  }
-  td:hover {
-    background-color: #cccccc;
   }
