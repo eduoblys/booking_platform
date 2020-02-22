@@ -159,3 +159,6 @@ msgstr "Patvirtinta"
 #: .\manager\templates\manager\manager.html:54
 msgid "Print"
 msgstr "Spausdinti"
+
+
+
