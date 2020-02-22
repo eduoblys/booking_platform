@@ -84,6 +84,7 @@ WSGI_APPLICATION = 'bookingapp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+# Comment
 
 db_pass = os.environ.get('DB_PASS')
 db_user = os.environ.get("DB_USER")
