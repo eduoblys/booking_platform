@@ -4,7 +4,7 @@ from django.utils import translation
 from .forms import ReservationForm
 
 from django.http import HttpResponse
-#from django_tables2 import RequestConfigs
+#from django_tables2 import RequestConfigsss
 from .models import  Reservations
 #from django.utils.translation import ugettext as _
 
