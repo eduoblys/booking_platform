@@ -7,12 +7,6 @@ from PIL import Image
 from booking.models import Reservations
 
 
-
-
-
-
-
-
 def print_pdf(request):
     # Create a file-like buffer to receive PDF data.
     buffer = io.BytesIO()
@@ -25,8 +19,6 @@ def print_pdf(request):
 
     p.line(20,800,560,800)
     
-
-
     data = Reservations.objects.all()
     b=0
     for e in data:
@@ -40,8 +32,8 @@ def print_pdf(request):
     p.drawString(100, 200, "Hello111 world!" + msg)
 
     #im = Image.open('./manager/utils/whatever.jpg')
-#im.hAlign = 'CENTER'
-#canvas.drawImage(self, image, x,y, width=None,height=None,mask=None) 
+    #im.hAlign = 'CENTER'
+    #canvas.drawImage(self, image, x,y, width=None,height=None,mask=None) 
     #p.drawImage(im, 50,50, width=50,height=50,mask=None)
 
 
